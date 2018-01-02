@@ -247,6 +247,14 @@ interface StepIndicatorProps {
    * @memberof StepIndicatorProps
    */
   renderCustomIndicator: (position: number) => JSX.Element
+  
+  /**
+   * Sublabel
+   * 
+   * @type {(position) => JSX.Element}
+   * @memberof StepIndicatorProps
+   */
+  renderSubLabel: (position: number) => JSX.Element
 
   /**
    * Callback fired when tapping on a step

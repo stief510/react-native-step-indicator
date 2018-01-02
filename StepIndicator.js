@@ -171,6 +171,7 @@ export default class StepIndicator extends PureComponent {
               <Text style={[styles.stepLabel,selectedStepLabelStyle , { fontSize: this.customStyles.labelSize }]}>
                 {label}
               </Text>
+              {this.props.renderSubLabel && this.props.renderSubLabel(index)}
             </View>
           </TouchableWithoutFeedback>
         )
@@ -324,7 +325,9 @@ export default class StepIndicator extends PureComponent {
     customStyles: PropTypes.object,
     direction: PropTypes.oneOf(['vertical', 'horizontal']),
     labels: PropTypes.array,
-    onPress: PropTypes.func
+    onPress: PropTypes.func,
+    renderCustomIndicator: PropTypes.func,
+    renderSubLabel: PropTypes.func
   };
 
   StepIndicator.defaultProps = {
