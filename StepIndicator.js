@@ -231,13 +231,12 @@ export default class StepIndicator extends PureComponent {
       }
 
       return (
-        <Animated.View key={'step-indicator'} removeClippedSubviews style={[styles.step , stepStyle ]}>
-          { this.props.renderCustomIndicator ?
-            this.props.renderCustomIndicator(position)
-            :
-          <Text style={indicatorLabelStyle}>{ position + 1 }</Text>
-          }
-        </Animated.View>
+        this.props.renderCustomIndicator ?
+          this.props.renderCustomIndicator(position)
+          :
+          <Animated.View key={'step-indicator'} removeClippedSubviews style={[styles.step , stepStyle ]}>
+            <Text style={indicatorLabelStyle}>{ position + 1 }</Text>
+          </Animated.View>
       );
     }
 
