@@ -179,7 +179,7 @@ export default class StepIndicator extends PureComponent {
       });
 
       return(
-        <View style={[styles.stepLabelsContainer, direction === 'vertical' ? {flexDirection: 'column', paddingHorizontal:4} : {flexDirection: 'row', paddingVertical:4}]}>
+        <View style={[styles.stepLabelsContainer, this.props.stepLabelsContainerCustomStyles, direction === 'vertical' ? {flexDirection: 'column', paddingHorizontal:4} : {flexDirection: 'row', paddingVertical:4}]}>
           {labelViews}
         </View>
       )
@@ -328,12 +328,14 @@ export default class StepIndicator extends PureComponent {
     labels: PropTypes.array,
     onPress: PropTypes.func,
     renderCustomIndicator: PropTypes.func,
-    renderSubLabel: PropTypes.func
+    renderSubLabel: PropTypes.func,
+    stepLabelsContainerCustomStyles: PropTypes.object
   };
 
   StepIndicator.defaultProps = {
     currentPosition: 0,
     stepCount: 5,
     customStyles: {},
-    direction: 'horizontal'
+    direction: 'horizontal',
+    stepLabelsContainerCustomStyles: {}
   };

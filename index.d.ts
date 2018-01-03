@@ -4,11 +4,12 @@
 // TypeScript Version: 2.3.3
 
 import React from 'react'
+import {ViewStyle} from 'react-native';
 
 interface StepIndicatorStyles {
   /**
    * Size of step indicator circle
-   * 
+   *
    * @default 30
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -17,7 +18,7 @@ interface StepIndicatorStyles {
 
   /**
    * Size of the current step indicator circle
-   * 
+   *
    * @default 40
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -26,7 +27,7 @@ interface StepIndicatorStyles {
 
   /**
    * Stroke thickness of the separator between steps
-   * 
+   *
    * @default 2
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -35,7 +36,7 @@ interface StepIndicatorStyles {
 
   /**
    * Thickness of the stroke around each step
-   * 
+   *
    * @default 3
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -44,7 +45,7 @@ interface StepIndicatorStyles {
 
   /**
    * Thickness of the stroke around the current step
-   * 
+   *
    * @default 3
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -52,8 +53,8 @@ interface StepIndicatorStyles {
   currentStepStrokeWidth?: number
 
   /**
-   * Stroke color for the current step 
-   * 
+   * Stroke color for the current step
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -62,7 +63,7 @@ interface StepIndicatorStyles {
 
   /**
    * Stroke color for finished steps
-   * 
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -71,7 +72,7 @@ interface StepIndicatorStyles {
 
   /**
    * Stroke color for unfinished steps
-   * 
+   *
    * @default '#aaaaaa'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -80,7 +81,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of separator for finished items
-   * 
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -89,7 +90,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of separator for unfinished items
-   * 
+   *
    * @default '#aaaaaa'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -98,7 +99,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of the circle for finished steps
-   * 
+   *
    * @default '#fe7013'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -107,7 +108,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of the circle for unfinished steps
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -116,7 +117,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of the circle for the current step
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -124,7 +125,7 @@ interface StepIndicatorStyles {
   stepIndicatorCurrentColor?: string
 
   /**
-   * Font size of the number inside the circle for each step 
+   * Font size of the number inside the circle for each step
    *
    * @default 15
    * @type {number}
@@ -134,7 +135,7 @@ interface StepIndicatorStyles {
 
   /**
    * Font size of the number inside the circle for the current step
-   * 
+   *
    * @default 15
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -143,7 +144,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of label for the current step
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -152,7 +153,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of labels that their steps are finished
-   * 
+   *
    * @default '#ffffff'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -161,7 +162,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of labels that their steps are unfinished
-   * 
+   *
    * @default 'rgba(255,255,255,0.5)'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -170,7 +171,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of the label text
-   * 
+   *
    * @default '#000000'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -179,7 +180,7 @@ interface StepIndicatorStyles {
 
   /**
    * Color of the current step label
-   * 
+   *
    * @default '#4aae4f'
    * @type {string}
    * @memberof StepIndicatorStyles
@@ -188,7 +189,7 @@ interface StepIndicatorStyles {
 
   /**
    * Font size for the labels
-   * 
+   *
    * @default 13
    * @type {number}
    * @memberof StepIndicatorStyles
@@ -199,7 +200,7 @@ interface StepIndicatorStyles {
 interface StepIndicatorProps {
   /**
    * Current step
-   * 
+   *
    * @default 0
    * @type {number}
    * @memberof StepIndicatorProps
@@ -208,7 +209,7 @@ interface StepIndicatorProps {
 
   /**
    * Number of steps
-   * 
+   *
    * @default 5
    * @type {number}
    * @memberof StepIndicatorProps
@@ -217,7 +218,7 @@ interface StepIndicatorProps {
 
   /**
    * Orientation of the Steps
-   * 
+   *
    * @default 'horizontal'
    * @type {('horizontal' | 'vertical')}
    * @memberof StepIndicatorProps
@@ -226,15 +227,23 @@ interface StepIndicatorProps {
 
   /**
    * Styles for the component
-   * 
+   *
    * @type {StepIndicatorStyles}
    * @memberof StepIndicatorProps
    */
   customStyles?: StepIndicatorStyles
 
   /**
-   * Labels for each step	
-   * 
+   * Styles for step labels
+   *
+   * @type {ViewStyle}
+   * @memberof StepIndicatorProps
+   */
+  stepLabelsContainerCustomStyles?: ViewStyle
+
+  /**
+   * Labels for each step
+   *
    * @type {string[]}
    * @memberof StepIndicatorProps
    */
@@ -242,15 +251,15 @@ interface StepIndicatorProps {
 
   /**
    * Custom indicator function
-   * 
+   *
    * @type {(position) => JSX.Element}
    * @memberof StepIndicatorProps
    */
   renderCustomIndicator: (position: number) => JSX.Element
-  
+
   /**
    * Sublabel
-   * 
+   *
    * @type {(position) => JSX.Element}
    * @memberof StepIndicatorProps
    */
@@ -258,9 +267,9 @@ interface StepIndicatorProps {
 
   /**
    * Callback fired when tapping on a step
-   * 
-   * @param {number} step 
-   * 
+   *
+   * @param {number} step
+   *
    * @memberof StepIndicatorProps
    */
   onPress?(step: number): void
