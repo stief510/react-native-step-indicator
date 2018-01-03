@@ -234,12 +234,20 @@ interface StepIndicatorProps {
   customStyles?: StepIndicatorStyles
 
   /**
-   * Styles for step labels
+   * Styles for step labels container
    *
    * @type {ViewStyle}
    * @memberof StepIndicatorProps
    */
   stepLabelsContainerCustomStyles?: ViewStyle
+
+  /**
+   * Styles for step labels view
+   *
+   * @type {ViewStyle}
+   * @memberof StepIndicatorProps
+   */
+  stepLabelItemCustomStyles?: ViewStyle
 
   /**
    * Labels for each step
