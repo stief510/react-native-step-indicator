@@ -176,7 +176,16 @@ interface StepIndicatorStyles {
    * @type {string}
    * @memberof StepIndicatorStyles
    */
-  labelColor?: string
+  unfinishedLabelColor?: string
+
+  /**
+   * Color of the label text
+   *
+   * @default '#000000'
+   * @type {string}
+   * @memberof StepIndicatorStyles
+   */
+  finishedLabelColor?: string
 
   /**
    * Color of the current step label
