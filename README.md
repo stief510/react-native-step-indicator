@@ -1,4 +1,4 @@
-# react-native-step-indicator
+# test react-native-step-indicator
 
 A simple react-native implementation of step indicator widget compatible with the ViewPager and ListView.
 
